@@ -4,8 +4,17 @@
       <title>Oh, hello there!</title>
       <meta http-equiv = "refresh" content = "5; url = http://home.lsisaloysius.online/berita" />
    </head>
+   
    <body>
+<script>
+var timeleft = 5;
+var downloadTimer = setInterval(function(){
+  document.getElementById("progressBar").value = 5 - --timeleft;
+  if(timeleft <= 0)
+    clearInterval(downloadTimer);
+},1000);
+</script>
       <p>OmegaLulEdiWow! You found this page!</br></p>
-      <p>Redirecting you to our lovely homepage...</br>Sincerely,</p><p>Andrew Jung</p>
+<p>Redirecting you to our lovely homepage...</br><progress value="0" max="5" id="progressBar"></progress></p><p>Sincerely, </br>Andrew Jung</p>
    </body>
 </html>
